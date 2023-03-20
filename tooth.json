@@ -1,22 +1,51 @@
 {
     "format_version": 1,
-    "tooth": "<tooth repository path without http:// or https://>",
-    "version": "<version>",
-    "dependencies": {},
+    "tooth": "github.com/Tooth-Hub/LiteLoaderBDS-Legacy",
+    "version": "408.2.0",
+    "dependencies": {
+        "github.com/tooth-hub/bds": [
+            [
+                "1.16.40"
+            ]
+        ]
+    },
     "information": {
-        "name": "<name>",
-        "description": "<description>",
-        "author": "<author>",
-        "license": "<license>",
-        "homepage": "<homepage>"
+        "name": "LiteLoaderBDS(More for BDS)",
+        "description": "An epoch-making cross-language plugin loader for Minecraft Bedrock Dedicated Server (BDS). ",
+        "author": "LiteLDev",
+        "license": "LGPL-3.0",
+        "homepage": "https://docs.litebds.com"
     },
     "placement": [
         {
-            "source": "<source>",
-            "destination": "<destination>"
+            "source": "LLPeEditor.exe",
+            "destination": "LLPeEditor.exe"
+        },
+        {
+            "source": "LiteLoader.dll",
+            "destination": "LiteLoader.dll"
+        },
+        {
+            "source": "LLPreLoader.dll",
+            "destination": "LLPreLoader.dll"
+        },
+        {
+            "source": "plugins/*",
+            "destination": "plugins/*"
         }
     ],
     "possession": [
-        "<possession>"
+        "plugins/LiteLoader/",
+        "bedrock_server_mod.exe"
+    ],
+    "commands": [
+        {
+            "type": "install",
+            "commands": [
+                ".\\LLPeEditor.exe --noPause"
+            ],
+            "GOOS": "windows",
+            "GOARCH": "amd64"
+        }
     ]
 }
