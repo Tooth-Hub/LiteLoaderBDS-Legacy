@@ -1,7 +1,7 @@
 {
     "format_version": 1,
     "tooth": "github.com/Tooth-Hub/LiteLoaderBDS-Legacy",
-    "version": "408.2.0",
+    "version": "408.3.0",
     "dependencies": {
         "github.com/tooth-hub/bds": [
             [
