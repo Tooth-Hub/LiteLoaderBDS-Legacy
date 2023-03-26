@@ -16,7 +16,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           tag_name: ${{ github.ref }}
-          name: Release ${{ github.ref }}
-          body: ${{ github.ref }}
+          name: Release ${{ github.ref_name }}
+          body: ${{ github.ref_name }}
           draft: false
           prerelease: false
